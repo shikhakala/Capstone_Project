@@ -10,8 +10,6 @@ We apply Logistic Regression, Decision Trees, Random Forest, SVM, and AdaBoost, 
 
 #### **Rationale**
 
-Why should anyone care about this question?
-
 Employee attrition silently erodes company performance, morale, and financial stability. Unchecked, it leads to:
 
 -   Talent Loss – Disrupts teams, delays projects, and lowers productivity.
@@ -22,8 +20,6 @@ Employee attrition silently erodes company performance, morale, and financial st
 By leveraging predictive analytics, organizations can proactively address attrition through career growth, competitive salaries, and better work-life balance, reducing costs and boosting workforce engagement for long-term success.
 
 #### **Research Question**
-
-What are you trying to answer?
 
 This study aims to answer two key questions:
 
@@ -37,10 +33,6 @@ This study aims to answer two key questions:
 By addressing these questions, we provide HR teams with data-driven insights to reduce turnover, improve retention, and foster workforce engagement.
 
 #### **Data Sources**
-
-What data will you use to answer your question?
-
-<https://www.kaggle.com/datasets/rushikeshghate/capstone-projectibm-employee-attrition-prediction/data>
 
 We will use the IBM Employee Attrition Prediction dataset from Kaggle ([link](https://www.kaggle.com/datasets/rushikeshghate/capstone-projectibm-employee-attrition-prediction/data)), which includes demographics, job roles, compensation, work conditions, and career growth factors.
 
@@ -63,63 +55,39 @@ We will use the IBM Employee Attrition Prediction dataset from Kaggle ([link](ht
 
 #### **Methodology**
 
-What methods are you using to answer the question?
-
 #### To address the research questions, we will follow a structured machine learning pipeline:
 
-#### Dataset & Preprocessing
+1.  Dataset & Preprocessing
+-   Use an internal HR dataset with demographics, job roles, performance, and satisfaction-related attributes.
+-   Clean and preprocess data to handle missing values and outliers.
+2.  Exploratory Data Analysis (EDA)
+-   Visualize attrition trends across key features (e.g., salary, tenure, department).
+-   Perform correlation analysis to uncover relationships between variables.
+3.  Feature Engineering & Selection
+-   Select key features based on domain knowledge and statistical methods.
+-   Use SHAP values to interpret feature importance and model predictions.
+4.  Model Training & Evaluation
 
-#### Use an internal HR dataset with demographics, job roles, performance, and satisfaction-related attributes.
+We will test multiple machine learning models:
 
-#### Clean and preprocess data to handle missing values and outliers.
+-   KNN (K-Nearest Neighbors) for a simple distance-based approach.
+-   Logistic Regression for a baseline model and easy interpretability.
+-   Decision Trees to capture non-linear relationships and provide visual explanation.
+-   Random Forest to reduce overfitting and improve accuracy through an ensemble of trees.
+-   SVM (Support Vector Machine) for robust decision boundaries, especially in higher-dimensional data.
+-   AdaBoost and XGBoost for gradient-boosted decision trees, often yielding strong performance on structured data.
+-   Neural Networks (with hyperparameter tuning) to capture more complex patterns in the data.
 
-#### Exploratory Data Analysis (EDA)
+Evaluation Metrics:
 
-#### Visualize attrition trends across key features (e.g., salary, tenure, department).
-
-#### Perform correlation analysis to uncover relationships between variables.
-
-#### Feature Engineering & Selection
-
-#### Select key features based on domain knowledge and statistical methods.
-
-#### Use SHAP values to interpret feature importance and model predictions.
-
-#### Model Training & Evaluation
-
-#### We will test multiple machine learning models:
-
-#### KNN (K-Nearest Neighbors) for a simple distance-based approach.
-
-#### Logistic Regression for a baseline model and easy interpretability.
-
-#### Decision Trees to capture non-linear relationships and provide visual explanation.
-
-#### Random Forest to reduce overfitting and improve accuracy through an ensemble of trees.
-
-#### SVM (Support Vector Machine) for robust decision boundaries, especially in higher-dimensional data.
-
-#### AdaBoost and XGBoost for gradient-boosted decision trees, often yielding strong performance on structured data.
-
-#### Neural Networks (with hyperparameter tuning) to capture more complex patterns in the data.
-
-#### Evaluation Metrics:
-
-#### F1-score (balancing precision & recall)
-
-#### AUC-ROC (discrimination power)
-
-#### Precision-Recall (handling class imbalance)
-
-#### Interpretability & Actionable Insights
-
-#### SHAP values will explain model predictions and identify key attrition drivers.
-
-#### Insights will be transformed into actionable HR recommendations.
-
-#### Deployment Considerations
-
-#### If effective, the model could be integrated into an HR analytics dashboard for real-time attrition risk assessment.
+-   F1-score (balancing precision & recall)
+-   AUC-ROC (discrimination power)
+-   Precision-Recall (handling class imbalance)
+5.  Interpretability & Actionable Insights
+-   SHAP values will explain model predictions and identify key attrition drivers.
+-   Insights will be transformed into actionable HR recommendations.
+6.  Deployment Considerations
+-   If effective, the model could be integrated into an HR analytics dashboard for real-time attrition risk assessment.
 
 #### **Results**
 
