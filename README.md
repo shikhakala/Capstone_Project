@@ -147,7 +147,7 @@ What suggestions do you have for next steps?
 
 #### **Outline of project**
 
--   [Link to notebook 1]()
+-   [Capstone_EDA](https://github.com/shikhakala/Capstone_Project/blob/main/Capstone_Project%20-%20EDA%20and%20Simple%20Model.ipynb)
 -   [Link to notebook 2]()
 -   [Link to notebook 3]()
 
