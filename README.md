@@ -4,45 +4,37 @@
 
 #### **Executive summary**
 
-#### Employee attrition leads to high recruitment costs, expertise loss, and reduced productivity. This study aims to predict attrition risk using machine learning on HR data, identifying key factors like job satisfaction, salary, and tenure.
+Employee attrition leads to high recruitment costs, expertise loss, and reduced productivity. This study aims to predict attrition risk using machine learning on HR data, identifying key factors like job satisfaction, salary, and tenure.
 
-#### We apply Logistic Regression, Decision Trees, Random Forest, SVM, and AdaBoost, with SHAP values for interpretability. Insights will help HR teams implement targeted retention strategies, reducing turnover costs and improving workforce engagement. This data-driven approach enables proactive decision-making for long-term stability and employee satisfaction.
+We apply Logistic Regression, Decision Trees, Random Forest, SVM, and AdaBoost, with SHAP values for interpretability. Insights will help HR teams implement targeted retention strategies, reducing turnover costs and improving workforce engagement. This data-driven approach enables proactive decision-making for long-term stability and employee satisfaction.
 
 #### **Rationale**
 
 Why should anyone care about this question?
 
-#### Employee attrition silently erodes company performance, morale, and financial stability. Unchecked, it leads to:
+Employee attrition silently erodes company performance, morale, and financial stability. Unchecked, it leads to:
 
-#### Talent Loss – Disrupts teams, delays projects, and lowers productivity.
+-   Talent Loss – Disrupts teams, delays projects, and lowers productivity.
+-   High Costs – Hiring and training new employees is far costlier than retention.
+-   Reduced Productivity – Frequent turnover results in knowledge loss and disengagement.
+-   Ineffective HR Strategies – Without data-driven insights, retention efforts may fail.
 
-#### High Costs – Hiring and training new employees is far costlier than retention.
-
-#### Reduced Productivity – Frequent turnover results in knowledge loss and disengagement.
-
-#### Ineffective HR Strategies – Without data-driven insights, retention efforts may fail.
-
-#### By leveraging predictive analytics, organizations can proactively address attrition through career growth, competitive salaries, and better work-life balance, reducing costs and boosting workforce engagement for long-term success.
+By leveraging predictive analytics, organizations can proactively address attrition through career growth, competitive salaries, and better work-life balance, reducing costs and boosting workforce engagement for long-term success.
 
 #### **Research Question**
 
 What are you trying to answer?
 
-#### This study aims to answer two key questions:
+This study aims to answer two key questions:
 
-#### What factors drive employee attrition?
+1.  What factors drive employee attrition?
+-   Is salary, job satisfaction, tenure, or work-life balance the biggest factor?
+-   Do specific job roles, departments, or demographics face higher turnover?
+2.  How accurately can we predict attrition?
+-   Can machine learning models (e.g., Random Forest, SVM) effectively flag at-risk employees?
+-   How early can attrition be predicted to enable proactive HR interventions?
 
-#### Is salary, job satisfaction, tenure, or work-life balance the biggest factor?
-
-#### Do specific job roles, departments, or demographics face higher turnover?
-
-#### How accurately can we predict attrition?
-
-#### Can machine learning models (e.g., Random Forest, SVM) effectively flag at-risk employees?
-
-#### How early can attrition be predicted to enable proactive HR interventions?
-
-#### By addressing these questions, we provide HR teams with data-driven insights to reduce turnover, improve retention, and foster workforce engagement.
+By addressing these questions, we provide HR teams with data-driven insights to reduce turnover, improve retention, and foster workforce engagement.
 
 #### **Data Sources**
 
