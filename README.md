@@ -148,7 +148,7 @@ What suggestions do you have for next steps?
 #### **Outline of project**
 
 -   [Capstone_EDA](https://github.com/shikhakala/Capstone_Project/blob/main/Capstone_Project%20-%20EDA%20and%20Simple%20Model.ipynb)
--   [Link to notebook 2]()
+-   [Analysis_KeyFindings](https://github.com/shikhakala/Capstone_Project/blob/main/What%20predicts%20employee%20attrition.docx)
 -   [Link to notebook 3]()
 
 ##### **Contact and Further Information**
