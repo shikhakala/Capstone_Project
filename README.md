@@ -177,6 +177,7 @@ These data-driven actions can cut overall attrition by 20-30%, leading to lower 
 
 -   [Capstone_EDA](https://github.com/shikhakala/Capstone_Project/blob/main/Capstone_Project%20-%20EDA%20and%20Simple%20Model.ipynb)
 -   [Analysis_KeyFindings](https://github.com/shikhakala/Capstone_Project/blob/main/What%20predicts%20employee%20attrition.docx)
--   [Link to notebook 3]()
+-   [EmployeeAttrition Notebook](https://github.com/shikhakala/Capstone_Project/blob/main/Capstone_Project%20-%20Employee%20Attrition.ipynb)
+-   [Presentation](https://github.com/shikhakala/Capstone_Project/blob/main/Employee%20Attrition.pptx)
 
 ##### **Contact and Further Information**
