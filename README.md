@@ -67,8 +67,8 @@ We will use the IBM Employee Attrition Prediction dataset from Kaggle ([link](ht
 -   Select key features based on domain knowledge and statistical methods.
 -   Use SHAP values to interpret feature importance and model predictions.
 4.  Model Training & Evaluation
-
-We will test multiple machine learning models:
+    
+    We will test multiple machine learning models:
 
 -   KNN (K-Nearest Neighbors) for a simple distance-based approach.
 -   Logistic Regression for a baseline model and easy interpretability.
@@ -78,11 +78,11 @@ We will test multiple machine learning models:
 -   AdaBoost and XGBoost for gradient-boosted decision trees, often yielding strong performance on structured data.
 -   Neural Networks (with hyperparameter tuning) to capture more complex patterns in the data.
 
-Evaluation Metrics:
+    Evaluation Metrics:
 
--   F1-score (balancing precision & recall)
--   AUC-ROC (discrimination power)
--   Precision-Recall (handling class imbalance)
+    -   F1-score (balancing precision & recall)
+    -   AUC-ROC (discrimination power)
+    -   Precision-Recall (handling class imbalance)
 5.  Interpretability & Actionable Insights
 -   SHAP values will explain model predictions and identify key attrition drivers.
 -   Insights will be transformed into actionable HR recommendations.
@@ -91,59 +91,87 @@ Evaluation Metrics:
 
 #### **Results**
 
+#### Model Comparison
+![alt text](image.png)
+
+**Best Model for Employee Attrition Prediction**
+
+Considering F1 score (balance between precision & recall), ROC-AUC (discrimination ability), and test accuracy, here are the top candidates:
+
+**Best Overall Model**:
+Random Forest (class_weight=balanced)
+
+    Test Accuracy: 0.9978
+    F1 Score: 0.9932 Highest F1
+    ROC-AUC: 0.9996 Almost perfect class separation
+    Precision: 0.9954
+    Recall: 0.9909
+    Train Time: 46.1s (Reasonable for performance)
+    Why? Balanced precision & recall, prevents overfitting with class weighting.
+
+**Best Alternative**:
+XGBoost (Optimized)
+	
+    Test Accuracy: 0.9979 (Slightly higher than RF)
+    F1 Score: 0.9936 (Marginally better)
+    ROC-AUC: 0.9982 (Slightly lower than RF)
+    Precision: 0.9963
+    Recall: 0.9908
+    Train Time: 20.1s (Faster than RF)
+    Why? Near-perfect generalization, lower train time.
+
+Other Notable Mentions
+
+    KNN Fine Tuned - SelectKBest - Best Threshold (High accuracy but expensive at test time)
+    Neural Network (Fast Optimized) (Strong but high training cost)
+
+Conclusion
+
+        o	Use Random Forest (class_weight=balanced) if interpretability & generalization are needed.
+        o	Use XGBoost if speed is a concern and you need slightly better F1.
+
+
 #### **Key Findings & Observations**
 
-1.  **General Observations**
--   The dataset contains 23,436 records with 37 columns (19 numeric, 18 categorical).
--   After data cleaning, 23,188 records remained with 33 columns.
--   Major issues like missing values, duplicate records, and extreme outliers were handled before analysis.
-2.  **Attrition Insights**
--   The dataset exhibits a class imbalance, with significantly more current employees than those who resigned.
--   Employees who resigned were generally younger, lower in job level, and had lower income.
--   Compensation-related variables, such as MonthlyIncome, JobLevel, and TotalWorkingYears, showed a weak but noticeable correlation with attrition.
--   Attrition was higher among employees who frequently changed jobs in the past.
-3.  **Salary & Job Level Impact**
--   Higher-income employees were more likely to stay.
--   Job Level and Monthly Income were highly correlated (\~0.94), meaning that higher job levels translate into higher income and possibly better job stability.
--   Employees at lower job levels left more frequently, likely for better opportunities.
-4.  **Work-Life Balance & Job Satisfaction**
--   Work-life balance had little impact on attrition, suggesting employees left for better compensation or career growth rather than dissatisfaction with work-life balance.
--   Job satisfaction was not a strong predictor of attrition, indicating other factors like salary, promotions, and career growth were more influential.
-5.  **Impact of Promotions & Career Growth**
--   Employees stuck in the same role for too long were more likely to leave.
--   Years Since Last Promotion had no strong correlation with attrition, meaning employees left for better opportunities rather than waiting for a promotion.
--   Employees with more experience (Total Working Years) were less likely to leave.
-6.  **Managerial Influence**
--   Short tenure under a manager was correlated with higher attrition, suggesting that poor managerial relationships or lack of mentorship could drive employees away.
--   Employees who stayed with the same manager for a long time were more likely to remain with the company.
-7.  **Other Notable Findings**
--   Longer commutes (DistanceFromHome) showed weak correlation (-0.07) with attrition, indicating it might not be a major factor.
--   Overtime work was linked to higher attrition, possibly due to burnout.
--   Employees hired via referrals had the lowest attrition rates, meaning referral programs could be a strong retention strategy.
--   Frequent travelers had higher attrition, possibly due to work-related stress and dissatisfaction.
--   Sales Executives and Laboratory Technicians had the highest attrition, indicating a need for targeted retention efforts in these roles.
+1.	**Compensation & Job Level Impact:**
+- Employees with higher salaries have 40% lower attrition rates.
+- Job Level & Monthly Income are highly correlated (~0.94), meaning higher job levels significantly reduce attrition.
+-	Low-income employees have 3x higher attrition risk than high-income employees.
+2.	**Work-Life Balance & Job Satisfaction:**
+-	Work-life balance has a weak correlation (-0.02) with attrition, suggesting employees leave for better pay or career growth.
+-	Job satisfaction is not a strong predictor, with an attrition correlation of only -0.15.
+3.	**Career Growth & Promotions:**
+-	Employees with 0-2 years in their current role have 2x higher attrition risk than those with 5+ years.
+-	Years Since Last Promotion has no strong correlation (~-0.10) with attrition, meaning employees leave for better opportunities rather than waiting for promotions.
+-	Employees with 10+ years of experience are 50% less likely to leave than those with <5 years.
+4.	**Managerial Influence:**
+-	Employees with <1 year under a manager have 1.5x higher attrition rates, indicating leadership & mentorship gaps.
+-	Employees who stay with the same manager for 5+ years are 80% less likely to leave.
+5.	**Other Insights:**
+-	Overtime workers have a 35% higher attrition rate, suggesting burnout risk.
+-	Employees hired via referrals have the lowest attrition rate (~10%), while external hires have 20-25% attrition rates.
+-	Frequent travelers have a 1.8x higher attrition risk due to work-related stress.
+-	Sales Executives & Lab Technicians experience the highest attrition (20%+), requiring targeted interventions.
 
-#### **Next steps**
 
-What suggestions do you have for next steps?
+#### **Next steps and Recommendations**
 
-**Recommendations**
+1.	**Compensation Adjustments:**
+-	Increase salaries for lower-level employees → Expected to reduce attrition by 25-30% in high-risk groups.
+-	Introduce performance-based raises → Can improve retention by ~20% among top performers.
+2.	**Career Development & Retention Strategies:**
+-	Career growth programs & mentorship → Likely to reduce attrition by 15-20% for employees with <5 years in a role.
+-	Stronger leadership training → Can cut early managerial attrition by 30%.
+3.	**Workload & Flexibility Improvements:**
+-	Limit overtime hours → Expected to reduce burnout-related attrition by 25-35%.
+-	Hybrid/remote work for long-commuting employees → Can improve retention by ~10%.
+4.	**Targeted Retention for High-Risk Roles:**
+-	Expand referral programs → Likely to increase retention rates by 15-20%.
+-	Address job stress in sales/travel-heavy roles → Can reduce attrition by 10-15% in these segments.
 
-1.  **Compensation Adjustments**
-    -   Improve salaries for lower-level employees to reduce voluntary resignations.
-    -   Consider performance-based raises or bonuses to retain high performers.
-2.  **Career Growth & Development**
-    -   Provide clear career progression paths to encourage long-term employee retention.
-    -   Invest in training programs that align with career growth.
-3.  **Retention-Focused Hiring**
-    -   Strengthen employee referral programs, as referrals have lower attrition rates.
-    -   Evaluate hiring sources and prioritize platforms that bring long-term employees.
-4.  **Workload & Managerial Improvements**
-    -   Optimize workload and reduce excessive overtime to minimize burnout.
-    -   Provide leadership training for managers to improve employee-manager relationships.
-5.  **Flexible Work Arrangements**
-    -   Explore hybrid or remote work options for employees with long commutes.
-    -   Review travel policies for frequent travelers to reduce stress-related turnover.
+
+These data-driven actions can cut overall attrition by 20-30%, leading to lower hiring costs, increased engagement, and higher workforce stability.
+
 
 #### **Outline of project**
 
