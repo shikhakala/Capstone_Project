@@ -92,7 +92,7 @@ We will use the IBM Employee Attrition Prediction dataset from Kaggle ([link](ht
 #### **Results**
 
 #### Model Comparison
-![alt text](image.png)
+![Model Comparison](https://github.com/shikhakala/Capstone_Project/blob/main/Model_Comparison.png)
 
 **Best Model for Employee Attrition Prediction**
 
